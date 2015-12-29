@@ -12,7 +12,5 @@ npm run webpack
 
 Open another terminal
 ```
-npm start
+npm run hot
 ```
-
-Reference : C. T. Lin https://github.com/chentsulin/electron-react-boilerplate

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boost Log</title>
+</head>
+<body>
+  <main id='main'></main>
+  <script>
+    var electron = require('electron')
+    electron.webFrame.setZoomLevelLimits(1, 1)
+    var _ = require('lodash')
+    var scriptUrl = _.find(electron.remote.process.argv, a => a === '--hot')
+      ? 'http://localhost:8080/assets/main.js'
+      : '../compiled/main.js'
+    var scriptEl=document.createElement('script')
+    scriptEl.setAttribute("type","text/javascript")
+    scriptEl.setAttribute("src", scriptUrl)
+    document.getElementsByTagName("head")[0].appendChild(scriptEl)
+  </script>
+</body>
+</html>
