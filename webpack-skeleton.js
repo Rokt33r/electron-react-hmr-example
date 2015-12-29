@@ -8,11 +8,7 @@ var config = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
-    packageMains: ['webpack', 'browser', 'web', 'browserify', ['jam', 'main'], 'main'],
-    alias: {
-      'lib': path.resolve(__dirname, 'lib'),
-      'browser': path.resolve(__dirname, 'browser')
-    }
+    packageMains: ['webpack', 'browser', 'web', 'browserify', ['jam', 'main'], 'main']
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
